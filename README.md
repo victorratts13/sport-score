@@ -1,9 +1,9 @@
-<center>
+<p align="center">
 
 <img src="https://github.com/victorratts13/sport-score/blob/main/assets/logo-sporte-score.png?raw=true" width="500" />
 
 ![version](https://img.shields.io/badge/version-1.0-brightgreen) ![env](https://img.shields.io/badge/lang-javascript-yellow) ![version](https://img.shields.io/badge/env-npm-red) 
-</center>
+</p>
 
 
 ## introduction
@@ -137,6 +137,8 @@ api.sport.categories().then(rest => {
 })
 ```
 
+## For more details.
 
+Contact-me on telegram: ``@victorratts``
 
 
