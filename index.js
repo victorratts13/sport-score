@@ -83,38 +83,35 @@ class score {
     }
 
     sport = {
-        futebol: {
-            categories() {
-                return new Promise((resolve, reject) => {
-                    //https://api.sofascore.com/api/v1/sport/${this.sport}/categories
-                    api.get(`${base}/api/${this.version || 'v1'}/sport/${this.sport}/categories`, false, false).then(rest => {
-                        return resolve(rest)
-                    }).catch(e => {
-                        return reject(e)
-                    })
+        categories() {
+            return new Promise((resolve, reject) => {
+                //https://api.sofascore.com/api/v1/sport/${this.sport}/categories
+                api.get(`${base}/api/${this.version || 'v1'}/sport/${this.sport}/categories`, false, false).then(rest => {
+                    return resolve(rest)
+                }).catch(e => {
+                    return reject(e)
                 })
-            },
-            toDay(dateEvent = dateFormat(this.now, 'yyyy-mm-dd'), count = '-10800') {
-                return new Promise((resolve, reject) => {
-                    //https://api.sofascore.com/api/v1/sport/${this.sport}/2021-07-12/-10800/categories
-                    api.get(`${base}/api/${this.version || 'v1'}/sport/${this.sport}/${dateEvent}/${count}/categories`, false, false).then(rest => {
-                        return resolve(rest)
-                    }).catch(e => {
-                        return reject(e)
-                    })
+            })
+        },
+        toDay(dateEvent = dateFormat(this.now, 'yyyy-mm-dd'), count = '-10800') {
+            return new Promise((resolve, reject) => {
+                //https://api.sofascore.com/api/v1/sport/${this.sport}/2021-07-12/-10800/categories
+                api.get(`${base}/api/${this.version || 'v1'}/sport/${this.sport}/${dateEvent}/${count}/categories`, false, false).then(rest => {
+                    return resolve(rest)
+                }).catch(e => {
+                    return reject(e)
                 })
-            },
-            trendingTopPlayers() {
-                return new Promise((resolve, reject) => {
-                    //https://api.sofascore.com/api/v1/sport/${this.sport}/trending-top-players
-                    api.get(`${base}/api/${this.version || 'v1'}/sport/${this.sport}/trending-top-players`, false, false).then(rest => {
-                        return resolve(rest)
-                    }).catch(e => {
-                        return reject(e)
-                    })
+            })
+        },
+        trendingTopPlayers() {
+            return new Promise((resolve, reject) => {
+                //https://api.sofascore.com/api/v1/sport/${this.sport}/trending-top-players
+                api.get(`${base}/api/${this.version || 'v1'}/sport/${this.sport}/trending-top-players`, false, false).then(rest => {
+                    return resolve(rest)
+                }).catch(e => {
+                    return reject(e)
                 })
-            }
-
+            })
         }
     }
 
