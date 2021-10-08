@@ -1,6 +1,6 @@
 {
   "name": "sport-score",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "score de jogos para bet365",
   "main": "index.js",
   "scripts": {
@@ -31,10 +31,10 @@
   },
   "homepage": "https://github.com/victorratts13/sport-score#readme",
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.21.4",
     "axios-cookiejar-support": "^1.0.1",
     "axios-fetch-request": "^1.0.0",
-    "dateformat": "^4.5.1",
+    "dateformat": "^4.6.3",
     "fetch": "^1.1.0",
     "tough-cookie": "^4.0.0"
   }
