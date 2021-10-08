@@ -4,6 +4,19 @@ const api = new score({
     sport: 'football'
 });
 
+
+// api.statistics(9223864).then(rest => {
+//     for(var arr of rest.statistics){
+//         if(arr.period == 'ALL'){
+//             console.log(arr)
+//         }
+//     }
+// })
+
+// api.votes('9223864').then(rest => {
+//     console.log(rest)
+// })
+
 // api.getlang(true).then(rest => {
 //     console.log(rest)
 // })
@@ -32,6 +45,6 @@ const api = new score({
 //     console.log(rest)
 // })
 
-api.oddsFeaturedEvents().then(rest => {
-    console.log(rest)
-})
+// api.oddsFeaturedEvents().then(rest => {
+//     console.log(rest)
+// })

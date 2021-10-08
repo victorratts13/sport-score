@@ -137,6 +137,44 @@ api.sport.categories().then(rest => {
 })
 ```
 
+## get Odds Information
+
+to get odds information, you can use 2 methods:
+
+```js
+//this method returns all odd informations in live
+api.oddsFeaturedEvents('2021-05-06', '1', '-10800').then(rest => {
+    console.log(rest)
+})
+//this method return a spect odds for any event in live
+api.fracionalOdds('9223864').then(rest => {
+    console.log(rest)
+})
+```
+
+## get statistic data
+
+for get statistics and metrics for a any event, you can use this method:
+
+```js
+api.statistics('9223864').then(rest => {
+    console.log(rest)
+})
+```
+
+## probability win based in popular votes
+
+to get a probability win statistic, you can use this method:
+
+```js
+api.votes('9223864').then(rest => {
+    console.log(rest)
+})
+
+```
+
+>- Note: this method return a popular vote for a event in live. This have a significant error margin.
+
 ## For more details.
 
 Contact-me on telegram: ``@victorratts``

@@ -126,6 +126,17 @@ class score {
         })
     }
 
+    fracionalOdds(event ='', page = 1){
+        return new Promise((resolve, reject) => {
+            //https://api.sofascore.com/api/v1/event/9223865/odds/1/featured
+            api.get(`${base}/api/${this.version || 'v1'}/event/${event}/odds/${page}/featured`, false, false).then(rest => {
+                return resolve(rest)
+            }).catch(e => {
+                return reject(e)
+            })
+        })
+    }
+
     FootballFeaturedEvents(page) {
         return new Promise((resolve, reject) => {
             //https://api.sofascore.com/api/v1/odds/1/featured-events/football
@@ -163,6 +174,28 @@ class score {
         return new Promise((resolve, reject) => {
             //https://api.sofascore.com/api/v1/event/9476094/odds/1/all
             api.get(`${base}/api/${this.version || 'v1'}/event/${event}/odds/${page}/all`, false, false).then(rest => {
+                return resolve(rest)
+            }).catch(e => {
+                return reject(e)
+            })
+        })
+    }
+
+    votes(event = '') {
+        return new Promise((resolve, reject) => {
+            //https://api.sofascore.com/api/v1/event/9223864/votes
+            api.get(`${base}/api/${this.version || 'v1'}/event/${event}/votes`, false, false).then(rest => {
+                return resolve(rest)
+            }).catch(e => {
+                return reject(e)
+            })
+        })
+    }
+
+    statistics(event = ''){
+        return new Promise((resolve, reject) => {
+            //https://api.sofascore.com/api/v1/event/9223864/statistics
+            api.get(`${base}/api/${this.version || 'v1'}/event/${event}/statistics`, false, false).then(rest => {
                 return resolve(rest)
             }).catch(e => {
                 return reject(e)
