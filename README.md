@@ -74,6 +74,16 @@ api.eventCount().then(rest => {
 })
 ```
 
+## get scheduled Events
+
+to get scheduled Events, you can use this:
+
+```js
+api.scheduledEvents('2021-05-06').then(rest => {
+    console.log(rest)
+})
+```
+
 ## get event odds
 use this method for get the odds information.
 
@@ -124,15 +134,15 @@ this method get all sport information with details from games.
 
 ```js
 // for get Top games from today
-api.sport.trendingTopPlayers().then(rest => {
+api.trendingTopPlayers().then(rest => {
     console.log(rest)
 })
 // get all data from spect day (if null is from today for default). Define number of rows if you like.
-api.sport.toDay('2021-05-06', '1000').then(rest => {
+api.toDay('2021-05-06', '1000').then(rest => {
     console.log(rest)
 })
 //get categories from all games.
-api.sport.categories().then(rest => {
+api.categories().then(rest => {
     console.log(rest)
 })
 ```

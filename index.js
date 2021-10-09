@@ -82,37 +82,38 @@ class score {
         }
     }
 
-    sports = {
-        categories() {
-            return new Promise((resolve, reject) => {
-                //https://api.sofascore.com/api/v1/sport/${this.sport}/categories
-                api.get(`${base}/api/${this.version || 'v1'}/sport/${this.sport}/categories`, false, false).then(rest => {
-                    return resolve(rest)
-                }).catch(e => {
-                    return reject(e)
-                })
+
+    categories() {
+        return new Promise((resolve, reject) => {
+            //https://api.sofascore.com/api/v1/sport/${this.sport}/categories
+            api.get(`${base}/api/${this.version || 'v1'}/sport/${this.sport}/categories`, false, false).then(rest => {
+                return resolve(rest)
+            }).catch(e => {
+                return reject(e)
             })
-        },
-        toDay(dateEvent = dateFormat(this.now, 'yyyy-mm-dd'), count = '-10800') {
-            return new Promise((resolve, reject) => {
-                //https://api.sofascore.com/api/v1/sport/${this.sport}/2021-07-12/-10800/categories
-                api.get(`${base}/api/${this.version || 'v1'}/sport/${this.sport}/${dateEvent}/${count}/categories`, false, false).then(rest => {
-                    return resolve(rest)
-                }).catch(e => {
-                    return reject(e)
-                })
+        })
+    }
+
+    toDay(dateEvent = dateFormat(this.now, 'yyyy-mm-dd'), count = '-10800') {
+        return new Promise((resolve, reject) => {
+            //https://api.sofascore.com/api/v1/sport/${this.sport}/2021-07-12/-10800/categories
+            api.get(`${base}/api/${this.version || 'v1'}/sport/${this.sport}/${dateEvent}/${count}/categories`, false, false).then(rest => {
+                return resolve(rest)
+            }).catch(e => {
+                return reject(e)
             })
-        },
-        trendingTopPlayers() {
-            return new Promise((resolve, reject) => {
-                //https://api.sofascore.com/api/v1/sport/${this.sport}/trending-top-players
-                api.get(`${base}/api/${this.version || 'v1'}/sport/${this.sport}/trending-top-players`, false, false).then(rest => {
-                    return resolve(rest)
-                }).catch(e => {
-                    return reject(e)
-                })
+        })
+    }
+
+    trendingTopPlayers() {
+        return new Promise((resolve, reject) => {
+            //https://api.sofascore.com/api/v1/sport/${this.sport}/trending-top-players
+            api.get(`${base}/api/${this.version || 'v1'}/sport/${this.sport}/trending-top-players`, false, false).then(rest => {
+                return resolve(rest)
+            }).catch(e => {
+                return reject(e)
             })
-        }
+        })
     }
 
     oddsFeaturedEvents(dateEvent = dateFormat(this.now, 'yyyy-mm-dd'), page = 1, rand = '-10800') {
@@ -126,7 +127,7 @@ class score {
         })
     }
 
-    fracionalOdds(event ='', page = 1){
+    fracionalOdds(event = '', page = 1) {
         return new Promise((resolve, reject) => {
             //https://api.sofascore.com/api/v1/event/9223865/odds/1/featured
             api.get(`${base}/api/${this.version || 'v1'}/event/${event}/odds/${page}/featured`, false, false).then(rest => {
@@ -192,7 +193,7 @@ class score {
         })
     }
 
-    statistics(event = ''){
+    statistics(event = '') {
         return new Promise((resolve, reject) => {
             //https://api.sofascore.com/api/v1/event/9223864/statistics
             api.get(`${base}/api/${this.version || 'v1'}/event/${event}/statistics`, false, false).then(rest => {
