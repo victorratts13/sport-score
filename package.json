@@ -1,6 +1,6 @@
 {
   "name": "sport-score",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "score de jogos para bet365",
   "main": "index.js",
   "scripts": {
