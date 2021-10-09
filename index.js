@@ -204,6 +204,17 @@ class score {
         })
     }
 
+    liveEvents(){
+        return new Promise((resolve, reject) => {
+            //https://api.sofascore.com/api/v1/sport/football/events/live
+            api.get(`${base}/api/v1/sport/${this.sport}/events/live`, false, false).then(rest => {
+                return resolve(rest)
+            }).catch(e => {
+                return reject(e)
+            })
+        })
+    }
+
     openUrl(url) {
         return new Promise((resolve, reject) => {
             api.get(url, false, false).then(rest => {
