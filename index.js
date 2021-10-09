@@ -82,7 +82,7 @@ class score {
         }
     }
 
-    sport = {
+    sports = {
         categories() {
             return new Promise((resolve, reject) => {
                 //https://api.sofascore.com/api/v1/sport/${this.sport}/categories
