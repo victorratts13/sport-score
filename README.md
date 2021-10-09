@@ -147,6 +147,16 @@ api.categories().then(rest => {
 })
 ```
 
+## get in live events
+
+this method return all live events.
+
+```js
+api.live().then(rest => {
+    console.log(rest)
+})
+```
+
 ## get Odds Information
 
 to get odds information, you can use 2 methods:
