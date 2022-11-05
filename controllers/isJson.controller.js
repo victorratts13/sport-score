@@ -8,6 +8,4 @@ function isJson(str) {
     return true;
 }
 
-module.exports = {
-    isJson
-}
+export default isJson;

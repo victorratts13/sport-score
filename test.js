@@ -1,5 +1,6 @@
-const score = require('./index');
-const api = new score({
+// const score = require('./index');
+import Score from "./index.js";
+const api = new Score({
     version: 'v1',
     sport: 'football'
 });
@@ -25,9 +26,9 @@ const api = new score({
 //     console.log(rest)
 // })
 
-// api.scheduledEvents().then(rest => {
-//     console.log(rest)
-// })
+api.scheduledEvents().then(rest => {
+    console.log(rest)
+})
 
 // api.oddsProviders('BR').then(rest => {
 //     console.log(rest)

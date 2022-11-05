@@ -2,7 +2,7 @@
 
 <img src="https://github.com/victorratts13/sport-score/blob/main/assets/logo-sporte-score.png?raw=true" width="500" />
 
-![version](https://img.shields.io/badge/version-1.0-brightgreen) ![env](https://img.shields.io/badge/lang-javascript-yellow) ![version](https://img.shields.io/badge/env-npm-red) 
+![version](https://img.shields.io/badge/version-1.0.7-brightgreen) ![env](https://img.shields.io/badge/lang-javascript-yellow) ![version](https://img.shields.io/badge/env-npm-red) 
 </p>
 
 
@@ -39,15 +39,16 @@ Where all live data can be set from your current time in UTC format.
 
 you can apply this library to your project through the NPM or Yarn repository
 
-```sh
-~# npm install sport-score --save
+```bash
+npm install sport-score --save
 
 ```
 and now import the library into your javascript project
 
 ```js
-const score = require('sport-score');
-const api = new score({
+import Score from "sport-score";
+
+const api = new Score({
     version: 'v1',//version from API
     sport: 'football'//sport model
 });
