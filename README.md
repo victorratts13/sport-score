@@ -2,7 +2,7 @@
 
 <img src="https://github.com/victorratts13/sport-score/blob/main/assets/logo-sporte-score.png?raw=true" width="500" />
 
-![version](https://img.shields.io/badge/version-1.0.7-brightgreen) ![env](https://img.shields.io/badge/lang-javascript-yellow) ![version](https://img.shields.io/badge/env-npm-red) 
+![version](https://img.shields.io/badge/version-1.0.8-brightgreen) ![env](https://img.shields.io/badge/lang-javascript-yellow) ![version](https://img.shields.io/badge/env-npm-red) 
 </p>
 
 
