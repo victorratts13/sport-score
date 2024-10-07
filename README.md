@@ -198,6 +198,7 @@ api.votes('9223864').then(rest => {
 
 ## For more details.
 
-Contact-me on telegram: ``@victorratts``
+Contact-me on telegram: ``@vratts``
+email: ``victor@vratts.com``
 
 
